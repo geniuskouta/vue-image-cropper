@@ -1,9 +1,21 @@
 <template>
+<div>
 <div class="img-cropper">
   <div class="img-container">
     <img ref="image" :src="src" />
   </div>
-  <img :src="destination" class="img-preview" />
+  <img id="cropped-image" :src="destination" class="img-preview" />
+</div>
+<div class="buttons">
+  <button class="c-button">キャンセル</button>
+  <button 
+    class="c-button"
+  >
+  <a :href="destination" download="">
+  保存
+  </a>
+  </button>
+</div>
 </div>
 </template>
 
@@ -53,5 +65,21 @@ export default {
     height: 200px;
     margin: 20px;
     border-radius: 50%;
+    /* display: none; */
+  }
+  .c-button{
+    padding: 5px 10px;
+    background: transparent;
+
+  }
+  .buttons {
+    width: 480px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .c-button a{
+    color:black;
+    text-decoration: none;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ImageCropper src="/profile_sample.jpg"></ImageCropper>
+    <ImageCropper src="/doge.jpg"></ImageCropper>
   </div>
 </template>
 
@@ -15,6 +15,9 @@ export default {
 </script>
 
 <style>
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
   .cropper-crop-box, .cropper-view-box {
       border-radius: 50%;
   }
