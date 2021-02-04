@@ -7,20 +7,18 @@
   <img id="cropped-image" :src="destination" class="img-preview" />
 </div>
 <div class="buttons">
-  <button class="c-button">キャンセル</button>
-  <button 
-    class="c-button"
-  >
   <a :href="destination" download="">
   保存
   </a>
-  </button>
 </div>
 </div>
 </template>
 
 <script>
 import Cropper from 'cropperjs';
+/*
+* https://github.com/fengyuanchen/cropperjs
+*/
 
 export default {
   name: 'ImageCropper',
@@ -64,22 +62,5 @@ export default {
     width: 200px;
     height: 200px;
     margin: 20px;
-    border-radius: 50%;
-    /* display: none; */
-  }
-  .c-button{
-    padding: 5px 10px;
-    background: transparent;
-
-  }
-  .buttons {
-    width: 480px;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .c-button a{
-    color:black;
-    text-decoration: none;
   }
 </style>
